@@ -14,7 +14,6 @@
     
     <!-- header -->
     <header class="first-header-container">
-
       <img class="logo" src="img/logo.png" alt="Rover logo" width="210" height="80">
         <nav>
           <a class="header-link" href="page1.html">Home</a>
@@ -22,11 +21,25 @@
           <a class="header-link" href="page3.html">Industries</a>
           <a class="header-link" href="page4.html">Contact Us</a>
         </nav>
-        
+      </header>
+      
+      <header class="first-header-container-mobile">
+        <img class="logo" src="img/logo.png" alt="Rover logo" width="210" height="80">
         <button class="first-header-right-mobile">
           <i class="fa fa-bars"></i>
         </button>
       </header>
+      
+      <div id="mobile_menu">
+        <nav class="flexMobile">
+          <a class="header-link" href="page1.html">Home</a>
+          <a class="header-link" href="page2.html">Why Choose Us</a>
+          <a class="header-link" href="page3.html">Industries</a>
+          <a class="header-link" href="page4.html">Contact Us</a>
+            <button id="close">X</button>
+        </nav>
+      </div>
+    
 
       <!-- Banner -->
 
@@ -41,6 +54,17 @@
             <button class="services-content-button">Find Out More</button>
           </div>
       </section>
+
+      <section class="banner-mobile"></section>
+      <div class="services-content-mobile">
+        <h1>IT Consulting & Services</h1>
+        <p>We offer comprehensive capabilities and deep industry knowledge 
+          necessary to help you evolve your organization in the ever 
+          changing global economy. We have helped numerous clients achieve 
+          their company's goals and rebranded their organization to greater success.</p>
+      
+          <button class="services-content-button-mobile">Find Out More</button>
+        </div>
       
       <section class="banner-margin-right-150"></section>
 
@@ -188,6 +212,14 @@
 
 <script>
 // src="js/js1.js" type="text/javascript">
+document.querySelector("button").addEventListener("click", function(){
+    document.querySelector("#mobile_menu").classList.add("show")
+})
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector("#mobile_menu").classList.remove("show")
+    document.querySelector("#mobile_menu").classList.add("hide")
+})
 
 function test1() {
             document.getElementById('t1').innerHTML
@@ -205,6 +237,9 @@ function test3() {
 document.getElementById('t1').innerHTML
     = '"I just checked the app. WELL DONE guys - you made my day!!! Looks really good!. They have been a professional and committed partner who have taken responsibility for the partnership" - CEO, e-commerce company in US';
 }
+
+
+
         
 
 
